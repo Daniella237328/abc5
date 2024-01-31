@@ -1,25 +1,27 @@
-import logo from './logo.svg';
-import './App.css';
+import Weather from "./Weather";
+import "./App.css";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faGithub } from "@fortawesome/free-brands-svg-icons";
 
-function App() {
+export default function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <div className="container">
+        <Weather defaultCity="New York" />
+        <footer>
+          <a
+            href="https://github.com/Elvin4ik/SheCodesWeather.git"
+            target="_blank"
+            rel="noreferrer"
+          >
+            Open-source code {""}
+          </a>{" "}
+          {""}
+          <FontAwesomeIcon icon={faGithub} />
+          {""} {""}
+          This project was coded by Elvina
+        </footer>
+      </div>
     </div>
   );
 }
-
-export default App;
